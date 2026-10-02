@@ -31,7 +31,15 @@
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
 
-  .hero { padding: 56px 0 96px; text-align: center; }
+  .hero, .how, .statement {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero > .wrap, .how > .wrap, .statement > .wrap { width: 100%; }
+  .hero { padding: 56px 0; text-align: center; }
   .hero-mark { display: inline-block; margin-bottom: 36px; }
   .hero-mark svg { height: 56px; width: auto; display: block; }
   h1 {
@@ -76,7 +84,7 @@
   .teaser b { font-weight: 600; color: var(--black); }
   .teaser a { color: var(--black); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
-  .how { border-top: 1px solid var(--line); padding: 88px 0; }
+  .how { border-top: 1px solid var(--line); padding: 88px 0; text-align: center; }
   .eyebrow {
     font-size: 13px;
     text-transform: uppercase;
@@ -101,7 +109,7 @@
 
   .how-cta { text-align: center; margin-top: 56px; }
 
-  .statement { border-top: 1px solid var(--line); padding: 96px 0; text-align: center; }
+  .statement { border-top: 1px solid var(--line); padding: 96px 0; text-align: center; flex-direction: column; }
   .statement p {
     font-family: "DM Serif Display", serif;
     font-size: clamp(26px, 4vw, 40px);
@@ -142,7 +150,7 @@
   .foot a.pill-solid { background: var(--black); color: var(--white); border: 1px solid var(--black); }
 
   @media (max-width: 720px) {
-    .hero { padding: 48px 0 72px; }
+    .hero { padding: 48px 0; }
     .steps { grid-template-columns: 1fr; gap: 36px; }
     .how, .statement { padding: 64px 0; }
     .foot { flex-direction: column; align-items: flex-start; }
